@@ -8,12 +8,12 @@ public class Acquisto {
 	private LocalDate istante;
 	private float prezzoAcquisto;
 	
-	private Azione azione;
+	private Societa societa;
 	private Giocatore acquirente;
 	
-	public Acquisto(int q, LocalDate localDate, float p, Azione a, Giocatore g){
+	public Acquisto(int q, LocalDate localDate, float p, Societa a, Giocatore g){
 		acquirente = g;
-		azione = a;
+		societa = a;
 		quantita = q;
 		istante = localDate;
 		prezzoAcquisto = p;
@@ -30,12 +30,13 @@ public class Acquisto {
 	public float getPrezzoAcquisto() {
 		return prezzoAcquisto;
 	}
-	public Azione getAzione() {
-		return azione;
+	public Societa getSocieta() {
+		return societa;
 	}
 	public Giocatore getAcquirente() {
 		return acquirente;
 	}
+
 
 	
 }

@@ -4,7 +4,8 @@ public class Borsa {
 	private String citta="New York";
 	private Listino listino;
 	
-	public Borsa() {
+	public Borsa(String c) {
+		citta=c;
 		listino = new Listino();
 	}
 

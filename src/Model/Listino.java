@@ -13,5 +13,12 @@ public class Listino {
 		//TODO Verificare che la societa non sia già presente
 		societa.add(s);
 	}
+
+	/**
+	 * @return the societa
+	 */
+	public ArrayList<Societa> getSocieta() {
+		return societa;
+	}
 	
 }

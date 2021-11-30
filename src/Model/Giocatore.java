@@ -20,7 +20,7 @@ public class Giocatore {
 	public void calcolaCapitale() {
 		capitale = liquidita;
 		for (Acquisto a:acquisto) {
-			capitale += (a.getQuantita()*a.getAzione().getPrezzo());
+			capitale += (a.getQuantita()*a.getSocieta().getPrezzoAzione());
 		}
 	}
 	
@@ -39,11 +39,15 @@ public class Giocatore {
 		
 	}
 
-	public void acquista(int i, LocalDate now, float prezzo, Azione azione) {
+	public void acquista(int i, LocalDate now, float prezzo, Societa societa) {
 		//TODO : verifica che la liquidita sia sufficiente
-		Acquisto a = new Acquisto (i, now, prezzo, azione,this);
+		Acquisto a = new Acquisto (i, now, prezzo, societa,this);
 		acquisto.add(a);
 		calcolaCapitale();
+	}
+
+	public ArrayList getListaAcquisti() {
+		return acquisto;
 	}
 	
 }
